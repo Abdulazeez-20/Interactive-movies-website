@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+:root{
+    --primary-color: #cb7f09;
+    --defulat-test-color: white;
+}
+
+.navbar-menu{
+    display: none;
+}
+
+.navbar-burger{
+    padding: 1rem 0.5rem;
+    margin-right: 8px;
+    background: transparent;
+    border-radius: 4px;
+    margin-left: 0.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-burger .navicon{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    position: relative;
+    transition: background-color 0.5s;
+}
+
+.navbar-burger .navicon::before, .navbar-burger .navicon::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    position: absolute;
+    transition: all ease-out 0.5s;
+}
+
+.navbar-burger .navicon::before{
+    top: -5px;
+}
+.navbar-burger .navicon::after{
+    top: 5px;
+}
+
+.navbar-logo {
+    display: flex;
+}
+
+/*                Header                                 */
+.is-loggedOut header, .is-loggedOut footer{
+    display: none;
+}
+
+header{
+    padding: 30px;
+    background-color: transparent;
+    border: 1px dotted var(--primary-color);
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: -2rem;
+}
+
+
+header.is-active .navbar-burger .navicon{
+    background-color: transparent;
+}
+
+header.is-active .navbar-burger .navicon::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+header.is-active .navbar-burger .navicon::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+header.is-active .navbar-menu{
+    display: block;
+    top: 4rem;
+    position: absolute;
+    margin: 0.8rem 1rem;
+    background-color: #000;
+    width: 100%;
+    z-index: 1;
+}
+
+header.is-active .navbar-menu .navbar-item {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 16px;
+    border-bottom: 1px solid transparent;
+}
+
+/*foooooooooooottttttttttttttttttttter*/
+
+footer.section{
+    background-color: transparent;
+    padding: 1.25rem 2rem;
+    margin-top: 8px ;
+    border: 1px dotted var(--primary-color);
+
+}
+
+.footer-nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+footer .logout {
+    color: #ffffffb3;
+    text-decoration: none;
+    margin-right: auto;
+}
+.logout:hover{
+    color: #cb7f09;
+}
+
+.grayscale {
+    filter: grayscale(0.5);
+}
+
+.navbar-menu .navbar-item.active{
+    color: white;
+    border-bottom-color: #cb7f09;
+}
+
+.navbar-menu .navbar-item:hover{
+    color: #cb7f09;
+}
+
+.navbar-search {
+    display: flex;
+    margin-left: auto;
+}
+
+input.searchInput {
+    line-height: 20px;
+    padding: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    margin-right: 1rem;
+}
+
+section.hero {
+    padding: 50px 30px;
+}
+
+section.featuredMovies{
+    background-image: url('/cover.92b87865.svg');
+    background-size: cover;
+    background-position: top center;
+}
+
+.featured-title {
+    color: white;
+    font-size: 34px;
+}
+
+.featured-overview {
+    color: gray;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 34px;
+    margin: 16px 0;
+}
+
+a.button {
+    background: #cb7f09;
+    color: white;
+    padding: 12px 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+a.button.is-secondary{
+    background-color: transparent;
+    color: #cb7f09;
+}
+
+/*movieeeees*/
+
+h3.section-title {
+    color: white;
+    padding: 16px 0;
+}
+
+ul.moviesGrid {
+    display: flex;
+    overflow: scroll;
+    margin-right: 16px;
+    list-style: none;
+}
+
+li.movie {
+    position: relative;
+}
+
+span.movie-description {
+    display: flex;
+    width: 100%;
+    background: black;
+    padding: 12px;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+   /* justify-content: space-between;       makes margin between two items*/
+   color: white;
+}
+
+.moviesGrid li:hover .movie-description{
+    opacity: 1;
+}
+
+span.play-icon {
+    margin-left: auto;
+}
+
+/*               details.js                     */
+
+.main-title{
+    color: whitesmoke;
+    text-align: center;
+}
+.hero-details-page{
+    padding-right: 20px;
+}
+
+.hero-details-page .movie-description{
+    padding-right: 20px;
+}
+.hero-details-page .movie-description p{
+    padding-right: 10px;
+}
+
+.sub-title{
+    color: rgb(143, 109, 109);
+}
+
+.hero-details-page, .prof-personal-data{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.prof-personal-data{
+    padding: 20px 20px;
+}
+.prof-personal-data .container .title{
+color: rgba(0, 255, 68, 0.403);
+font-size: 1.1rem;
+   }
+.prof-personal-data .container .value{
+    color: white;
+    font-size: 1rem;
+    }
+
+    .prof-personal-data .container li{
+        list-style: none; 
+        padding-right: 10px;       
+        }
+
+/*media quires**********************/
+
+
+@media (min-width: 768px) {
+    .moviesGrid{
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .moviesGrid li{
+        margin: 6px;
+    }
+
+    .section-title{
+        text-align: center;
+    }
+
+    .featured-overview{
+        max-width: 540px;
+        padding-left: 40px;
+        
+    }
+
+    input.searchInput{
+        margin-right: 20em;
+    }
+}
+
+@media (min-width: 1440px){
+    header, section, footer{
+        max-width: 1440px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .moviesGrid{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .moviesGrid li{
+        margin-bottom: 8px;
+
+    }
+
+    input.searchInput{
+        margin-right: 30em;
+    }
+
+    .featured-overview{
+        padding-left: 40em;
+        
+    }
+}
+   @media (min-width: 1024px){
+    .navbar-burger{
+        display: none;
+    }
+   
+    .navbar-menu{
+        display: flex;
+        list-style-type: none;
+    }
+
+    .navbar-menu .navbar-item{
+        margin: 0 16px;
+        padding: 0 ;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+    }
+
+    header .navbar-menu .navbar-item {
+        border-bottom: 1px transparent solid;
+        padding-bottom: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    input.searchInput{
+        margin-right: 20em;
+    }
+
+    .featured-overview{
+        padding-left: 40px;
+        
+    }
+   }
+
+
+
+
+/*# sourceMappingURL=/main.d2070829.css.map */

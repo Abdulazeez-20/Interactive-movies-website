@@ -1,0 +1,73 @@
+.login{
+    margin: 5vh auto 0;
+    position: relative;
+    height: 90vh;
+    max-width: 87.5rem;
+    display: grid;
+    place-content: center;
+}
+
+.login-logo {
+    width: 50%;
+    height: auto;
+    margin: 0 auto 2rem;
+  }
+
+form{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 21px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 1%;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .form-field input {
+    margin: 10px 0;
+    width: 400px;
+    height: auto;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff94;
+
+  }
+
+  .form-field input[type="email"], .form-field input[type="password"] {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .form-field input[type="submit"] {
+    background: #E6B31E;
+    transition: background 0.4s;
+    height: 3.5rem;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+
+  .form-field input[type="submit"]:hover {
+    background: rgb(255, 194, 11);
+  }
+
+  .form-field a{
+    align-self: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 28px;
+    margin-top: 3.5%;
+    transition: color 0.5s;
+  }
+
+  .form-field a:hover{
+    color: #FFFFFF
+  }
+  
